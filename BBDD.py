@@ -25,10 +25,9 @@ class BBDD(object):
 
     def add(self,vendor,model,softversion):
         query = """INSERT INTO cm_models_test ( vendor, model, softversion) VALUES ('""" + vendor + """', '""" + model + """', '""" + softversion + """')"""
-        print(query)
+        #print(query)
         self.cursor.execute(query)
         self.conexion.commit()
-        print(self.cursor.rowcount, "Record inserted successfully into Laptop table")
         self.cursor.close()
 
 
