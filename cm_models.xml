@@ -1,0 +1,12 @@
+<cm_models>
+    <cm_model>
+        <vendor>test4</vendor>
+        <model>test5</model>
+        <softversion>test6</softversion>
+    </cm_model>
+    <cm_model>
+        <vendor>test4</vendor>
+        <model>test5</model>
+        <softversion>test6</softversion>
+    </cm_model>
+<cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>test4</vendor><model>test5</model><softversion>test6</softversion></cm_model><cm_model><vendor>Cisco - 1</vendor><model>DPC2325 - 6</model><softversion>dpc2325-v202r12811-110715as - 3</softversion></cm_model></cm_models>
