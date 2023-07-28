@@ -3,8 +3,16 @@ import xmlDocument
 import snmp_mock
 import sys
 
+CANTIDAD_PUNTOS_IPV4 = 3
+
+def checkIPV4(ip):
+    return ip.count('.') == CANTIDAD_PUNTOS_IPV4
+
 print("Lista de argumentos: " , sys.argv)
 
+if not(checkIPV4(str(sys.argv[1]))):
+    print("ERROR: BAD IP")
+    exit(1)
 
 """Se ejecuta el mock para simular los parametros de vendor, model y softversion"""
 snmp_mock_obj = snmp_mock.snmp_mock()

@@ -1,1 +1,17 @@
-<cm_models><cm_model><vendor>Cisco - 8</vendor><model>DPC2325 - 1</model><softversion>dpc2325-v202r12811-110715as - 9</softversion></cm_model></cm_models>
+<cm_models>
+    <cm_model>
+        <vendor>Cisco - 8</vendor>
+        <model>DPC2325 - 1</model>
+        <softversion>dpc2325-v202r12811-110715as - 9</softversion>
+    </cm_model>
+    <cm_model>
+        <vendor>Cisco - 1</vendor>
+        <model>DPC2325 - 3</model>
+        <softversion>dpc2325-v202r12811-110715as - 2</softversion>
+    </cm_model>
+    <cm_model>
+        <vendor>Cisco - 2</vendor>
+        <model>DPC2325 - 4</model>
+        <softversion>dpc2325-v202r12811-110715as - 3</softversion>
+    </cm_model>
+</cm_models>
