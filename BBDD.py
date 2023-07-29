@@ -24,12 +24,21 @@ class BBDD(object):
         "PRIMARY KEY (id));")
 
     def add(self,vendor,model,softversion):
+        query = self.cursor.execute("SELECT vendor, model, softversion FROM cm_models_test.cm_models_test;")
+        rows=self.cursor.fetchall()
+        new_row = (str(vendor), str(model), str(softversion))
+        for row in rows:
+            if new_row == row:
+                print("La IP ya fue ingresada")
+                return False
+
         """Se hace la query con los parametros recibidos"""
         query = """INSERT INTO cm_models_test ( vendor, model, softversion) VALUES ('""" + vendor + """', '""" + model + """', '""" + softversion + """')"""
         #print(query)
         self.cursor.execute(query)
         self.conexion.commit()
         self.cursor.close()
+        return True
 
 
 

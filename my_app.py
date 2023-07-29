@@ -14,6 +14,9 @@ if not(checkIPV4(str(sys.argv[1]))):
     print("ERROR: BAD IP")
     exit(1)
 
+
+
+
 """Se ejecuta el mock para simular los parametros de vendor, model y softversion"""
 snmp_mock_obj = snmp_mock.snmp_mock()
 
@@ -32,8 +35,8 @@ if sys.argv[2] == 'db' or sys.argv[2] == 'both':
     except:
         print("La tabla ya esta creada")
 
-    BBDD_obj.add(snmp_mock_obj.vendor, snmp_mock_obj.model, snmp_mock_obj.softversion)
-    print("Se actualizo la BBDD")
+    if BBDD_obj.add(snmp_mock_obj.vendor, snmp_mock_obj.model, snmp_mock_obj.softversion):
+        print("Se actualizo la BBDD")
 
 
 if sys.argv[2] == 'file' or sys.argv[2] == 'both':
