@@ -16,8 +16,23 @@ class XML(object):
         self.tree = ET.parse("cm_models.xml")
 
     def add(self,vendor,model,softversion):
+        new_element = [vendor,model,softversion]
         """Se agrega el set de parametros al xml"""
         self.xmlRoot = self.tree.getroot()
+        for page in self.xmlRoot:
+            i=0
+            element = ["","",""]
+            for elem in page:
+                element[i] = elem.text
+                i = i + 1
+                if i==3:
+                    print(element)
+                    print("-------------")
+                    i=0
+                    if element == new_element:
+                        print("XML REPETIDO")
+                        return False
+
         doc = ET.SubElement(self.xmlRoot, "cm_model")
         ET.SubElement(doc, "vendor").text = vendor
         ET.SubElement(doc, "model").text = model
