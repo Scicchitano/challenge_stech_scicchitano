@@ -2,6 +2,7 @@ import BBDD
 import xmlDocument
 import snmp_mock
 import sys
+import time
 
 CANTIDAD_PUNTOS_IPV4 = 3
 
