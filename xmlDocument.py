@@ -15,8 +15,9 @@ class XML(object):
         """Se inicializa el xml"""
         self.tree = ET.parse("cm_models.xml")
 
-    def add(self,vendor,model,softversion):
-        new_element = [vendor,model,softversion]
+    
+    def checkRepetido(self,vendor,model,softversion):
+        self.new_element = [vendor,model,softversion]
         """Se agrega el set de parametros al xml"""
         self.xmlRoot = self.tree.getroot()
         for page in self.xmlRoot:
@@ -26,12 +27,18 @@ class XML(object):
                 element[i] = elem.text
                 i = i + 1
                 if i==3:
-                    print(element)
-                    print("-------------")
+                    #print(element)
+                    #print("----------------------------------------------------------------------------")
                     i=0
-                    if element == new_element:
+                    if element == self.new_element:
                         print("XML REPETIDO")
-                        return False
+                        return True
+        return False
+
+    def add(self,vendor,model,softversion):
+
+        if self.checkRepetido(vendor,model,softversion):
+            return False
 
         doc = ET.SubElement(self.xmlRoot, "cm_model")
         ET.SubElement(doc, "vendor").text = vendor
@@ -40,3 +47,5 @@ class XML(object):
 
         #self.xmlRoot.append(doc)
         self.tree.write("cm_models.xml")
+        print("Se actualizo el XML")
+        return True

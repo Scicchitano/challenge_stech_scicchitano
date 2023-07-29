@@ -46,5 +46,4 @@ if sys.argv[2] == 'file' or sys.argv[2] == 'both':
     XML_obj.inicializacion()
 
     XML_obj.add(snmp_mock_obj.vendor, snmp_mock_obj.model, snmp_mock_obj.softversion)
-    print("Se actualizo el XML")
 
